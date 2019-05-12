@@ -18,26 +18,33 @@ a hugo based website.
 
 ### Export Your Github Username as An Environment Variable
 If you are using bash as your shell you can just add the following line to your .${SHELL}rc
+
 ```
-	EXPORT USERNAME={Your_Github_Username}
+EXPORT USERNAME={Your_Github_Username}
 ```
 
 ## Initial Setup of Your Repo
 ### Clone your repo locally
 Make sure you have a local working copy of your repo before continuing.
+
 ```
-	git clone https://github.com/${USERNAME}/${USERNAME}.github.io
+git clone https://github.com/${USERNAME}/${USERNAME}.github.io
 ```
+
 ### Adding the setup and deployment script to your repo
 Now that you have an empty repository you need to add this repository's files into the your empty repo.
 You can do this by setting this repository as an upstream to your empty repository.
+
 ```
-	git remote add upstream https://github.com/LukeWood/Github-Pages-Hugo-Boilerplate.git
+git remote add upstream https://github.com/LukeWood/Github-Pages-Hugo-Boilerplate.git
 ``` 
+
 Next pull this repo into your repo.
+
 ```
-	git pull https://github.com/LukeWood/Github-Pages-Hugo-Boilerplate.git
+git pull https://github.com/LukeWood/Github-Pages-Hugo-Boilerplate.git
 ```
+
 You will now have the _setup.sh_ and _deploy.sh_ scripts.
 *Existing repos will need to be rebased in order to pull this repo.*
 
@@ -56,20 +63,20 @@ For this setup you'll want to use the "Serve from master" setting.
 ### Initialize your repo as a hugo project
 Make sure you are on the hugo branch
 ```
-	git checkout hugo
+git checkout hugo
 ```
 
 Now create your hugo site in your github repo.  The force flag is required as we already have the setup and deploy scripts.
 
 ```
-	hugo new site . --force
+hugo new site . --force
 ```
 
 ### Run the setup script
 Run the setup script *once*.
 
 ```
-	./setup.sh
+./setup.sh
 ```
 
 Your repo is now all setup as a hugo project!
@@ -78,7 +85,7 @@ Your repo is now all setup as a hugo project!
 After you add content and themes, simply run the deploy.sh script to update your website.
 
 ```
-	./deploy.sh
+./deploy.sh
 ```
 
 Make sure to checkout [hugo's docs](https://gohugo.io/getting-started/quick-start/) to get started!  Happy hacking!
