@@ -20,7 +20,7 @@ a hugo based website.
 If you are using bash as your shell you can just add the following line to your .${SHELL}rc
 
 ```
-EXPORT USERNAME={Your_Github_Username}
+export USERNAME={Your_Github_Username}
 ```
 
 ## Initial Setup of Your Repo
