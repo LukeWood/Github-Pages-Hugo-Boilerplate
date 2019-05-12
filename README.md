@@ -67,17 +67,19 @@ Credit to [Jente Hidskes](https://www.hjdskes.nl/blog/update-deploying-hugo-on-p
 Github pages serves from the master branch but we will want a separate branch to develop content on.
 In order to solve this you should change your default branch from master to something else (I just use hugo as the branch name).
 
-[Instructions to do so can be found here.](https://help.github.com/en/articles/setting-the-default-branch)
+Make sure to create the hugo branch locally so you can set hugo as the default branch.
+```
+git checkout -b hugo
+git commit --allow-empty -m "This empty commit adds the hugo branch to Github"
+git push origin hugo
+```
 
-### Setup Github Pages
-For this setup you'll want to use the "Serve from master" setting. 
-
-[Full steps for Github Pages setup can be found here](https://github.com/pandao/editor.md/archive/master.zip)
+[Instructions to change the default branch to hugo can be found here.](https://help.github.com/en/articles/setting-the-default-branch)
 
 ### Initialize your repo as a hugo project
 Make sure you are on the hugo branch
 ```
-git checkout -b hugo
+git checkout hugo
 ```
 
 Now create your hugo site in your github repo.  The force flag is required as we already have the setup and deploy scripts.
@@ -94,6 +96,11 @@ Run the setup script *once*.
 ```
 
 Your repo is now all setup as a hugo project!
+
+### Setup Github Pages
+For this setup you'll want to use the "Serve from master" setting. 
+
+[Full steps for Github Pages setup can be found here](https://github.com/pandao/editor.md/archive/master.zip)
 
 ## Adding content/themes
 After you add content and themes, simply run the deploy.sh script to update your website.
