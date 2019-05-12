@@ -23,6 +23,14 @@ If you are using bash as your shell you can just add the following line to your 
 export USERNAME={Your_Github_Username}
 ```
 
+*Make sure to add this to your bashrc*
+
+If you are using bash as your shell you can just add the following line to your .${SHELL}rc
+
+```
+export USERNAME={Your_Github_Username}
+```
+
 ## Initial Setup of Your Repo
 ### Clone your repo locally
 Make sure you have a local working copy of your repo before continuing.
