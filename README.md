@@ -39,6 +39,12 @@ Make sure you have a local working copy of your repo before continuing.
 git clone https://github.com/${USERNAME}/${USERNAME}.github.io
 ```
 
+Now change your current working directory to the clone of your repo.
+
+```
+cd ${USERNAME}.github.io
+```
+
 ### Adding the setup and deployment script to your repo
 Now that you have an empty repository you need to add this repository's files into the your empty repo.
 You can do this by setting this repository as an upstream to your empty repository.
