@@ -77,7 +77,7 @@ For this setup you'll want to use the "Serve from master" setting.
 ### Initialize your repo as a hugo project
 Make sure you are on the hugo branch
 ```
-git checkout hugo
+git checkout -b hugo
 ```
 
 Now create your hugo site in your github repo.  The force flag is required as we already have the setup and deploy scripts.
